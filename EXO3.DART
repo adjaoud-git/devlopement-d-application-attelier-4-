@@ -1,5 +1,6 @@
-class Compte {
-  double _solde; // attribut privé
+ class Compte {
+  final String numeroCompte;
+  double _solde;
 
-  Compte() : _solde = 0.0; // constructeur par défaut
+  Compte(this.numeroCompte) : _solde = 0.0;
 }
