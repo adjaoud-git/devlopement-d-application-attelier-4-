@@ -24,3 +24,15 @@ class Cercle extends Forme {
     print("Aire du cercle : ${pi * rayon * rayon}");
   }
 }
+
+void main() {
+  List<Forme> formes = [
+    Rectangle(4, 5),
+    Cercle(3),
+    Rectangle(2, 10)
+  ];
+
+  for (var f in formes) {
+    f.aire();
+  }
+}
