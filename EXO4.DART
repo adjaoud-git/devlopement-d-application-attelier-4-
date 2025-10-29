@@ -9,4 +9,8 @@
 class Livre extends Media {
   final String auteur;
   Livre(String titre, this.auteur) : super(titre);
+  @override
+  void afficherType() {
+    print("Ceci est un livre : '$titre' par $auteur");
+  }
 }
