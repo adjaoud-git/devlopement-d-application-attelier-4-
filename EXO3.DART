@@ -1,17 +1,23 @@
-class Employe {
+ class Employe {
   String nom;
   double salaire;
 
-  // Constructeur
   Employe(this.nom, this.salaire);
 
-  // Méthode pour afficher les infos
   void afficherInfos() {
     print("Employé : $nom, Salaire : \$${salaire}");
   }
 }
 
+class Manager extends Employe {
+  String departement;
+
+  // Constructeur de la classe fille
+  Manager(String nom, double salaire, this.departement)
+      : super(nom, salaire);
+}
+
 void main() {
-  var e1 = Employe("Hocine", 3500);
-  e1.afficherInfos();
+  var m1 = Manager("Hocine", 5000, "Informatique");
+  m1.afficherInfos();
 }
