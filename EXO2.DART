@@ -1,12 +1,18 @@
-class Point {
+ class Point {
   double _x;
   double _y;
 
-  // Constructeur
   Point(this._x, this._y);
+
+  // Déplace le point
+  void move(double dx, double dy) {
+    _x += dx;
+    _y += dy;
+  }
 }
 
 void main() {
   var pt = Point(2, 5);
-  print("Point créé !");
+  pt.move(4, -3);
+  print("Point déplacé !");
 }
