@@ -12,12 +12,19 @@
 class Manager extends Employe {
   String departement;
 
-  // Constructeur de la classe fille
   Manager(String nom, double salaire, this.departement)
       : super(nom, salaire);
+
+  @override
+  void afficherInfos() {
+    print("Manager : $nom, Département : $departement, Salaire : \$${salaire}");
+  }
 }
 
 void main() {
+  var e1 = Employe("Youssef", 3000);
   var m1 = Manager("Hocine", 5000, "Informatique");
+
+  e1.afficherInfos();
   m1.afficherInfos();
 }
