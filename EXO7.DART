@@ -1,1 +1,4 @@
-class Tache {}
+ class Tache {
+  String description;
+  Tache(this.description);
+}
